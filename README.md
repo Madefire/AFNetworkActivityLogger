@@ -1,4 +1,6 @@
-# AFNetworkActivityLogger
+# AFNetworkActivityLogger [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+Note: This is a forked version from AFNetworking/AFNetworkActivityLogger.  The reason why this was forked is that the original repo DOES NOT have (as of 05/29/2017) a `3.0.0` version or above that will work with AFNetworking `3.0.0` or above.  This repo contains a Carthage version `3.0.0` that can be pulled in to other projects that will function correctly with AFNetworking version `3.0.0` or above.
 
 `AFNetworkActivityLogger` is an extension for [AFNetworking](http://github.com/AFNetworking/AFNetworking/) 3.0 that logs network requests as they are sent and received.
 
