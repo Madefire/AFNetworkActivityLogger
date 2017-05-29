@@ -32,3 +32,4 @@ fastlane/test-output/*
 
 # Carthage
 Carthage
+*.framework.zip
