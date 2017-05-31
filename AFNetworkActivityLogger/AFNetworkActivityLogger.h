@@ -21,7 +21,17 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "AFNetworkActivityLoggerProtocol.h"
+
+//! Project version number for AFNetworkActivityLogger.
+FOUNDATION_EXPORT double AFNetworkActivityLoggerVersionNumber;
+
+//! Project version string for AFNetworkActivityLogger.
+FOUNDATION_EXPORT const unsigned char AFNetworkActivityLoggerVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <AFNetworkActivityLogger/PublicHeader.h>
+
+#import <AFNetworkActivityLogger/AFNetworkActivityLoggerProtocol.h>
+#import <AFNetworkActivityLogger/AFNetworkActivityConsoleLogger.h>
 
 /**
  `AFNetworkActivityLogger` logs requests and responses made by AFNetworking, with an adjustable level of detail.
