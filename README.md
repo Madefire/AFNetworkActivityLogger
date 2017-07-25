@@ -8,6 +8,29 @@ Unfortunately at this time, the Carthage module is only compatable with iOS. tvO
 
 This is a forked version from AFNetworking/AFNetworkActivityLogger.  The reason why this was forked is that the original repo DOES NOT have (as of 05/29/2017) a `3.0.0` version or above that will work with AFNetworking `3.0.0` or above.  This repo contains a Carthage/Cocoapod versions that can be pulled in to other projects that will function correctly with AFNetworking version `3.0.0` or above.
 
+### Building a new release
+
+1. Update code that is required.
+2. Add any new public header files to AFNetworkActivityLogger.h.
+3. Bump version number (`CFBundleShortVersionString`) in Supporting Files/Info.plist.
+4. Verify project builds.
+5. In the root directory run the following:
+  
+`$ carthage build --no-skip-current`  
+`$ carthage archive`  
+
+6. Bump version number in AFNetworkActivityLogger.podspec (same number as step 3).
+7. Tag current `3_0_0` branch to the same number as the version number from steps 3 and 4, and push to Github.
+8. [Go to Github releases page for Reachability](https://github.com/Madefire/Reachability/releases).
+9. Click on the release of the version you tagged and uploaded to Github.
+10. Add release notes, and attach Reachability.framework.zip that was created from step 5 to the release.
+11. Click "Update Release."
+12. In the root directory run the following:  
+  
+`$ pod repo push PrivateCocoapodSpecs AFNetworkActivityLogger.podspec`
+  
+13. Update this `README.md` pod version badge number.
+
 ## Description
 
 `AFNetworkActivityLogger` is an extension for [AFNetworking](http://github.com/AFNetworking/AFNetworking/) 3.0 that logs network requests as they are sent and received.
